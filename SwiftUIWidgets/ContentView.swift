@@ -16,13 +16,16 @@ struct ContentView: View {
             Text("Gelen veri : \(alinanVeri)")
                 .padding()
                 .foregroundStyle(.black)
-                
-                
                 .bold()
             
             TextField("Veri Giriniz", text: $tf)
                 .textFieldStyle(.bordered)
+                .background(.red)
+                .border(.black)
+                .cornerRadius(.greatestFiniteMagnitude)
                 .padding()
+                
+                
             
             Button("Veriyi Al"){
                 alinanVeri = tf
