@@ -9,7 +9,24 @@ import SwiftUI
 
 struct onTabGes: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            Text("Merhaba").onTapGesture {
+                print("Tıklandı")
+            }
+            .padding()
+            onTabGes1()
+            
+        }
+    }
+}
+struct onTabGes1: View {
+    var body: some View {
+        VStack{
+            Text("Merhaba").onTapGesture(count:2) {
+                print("2 kez Tıklandı")
+            }
+            
+        }
     }
 }
 
