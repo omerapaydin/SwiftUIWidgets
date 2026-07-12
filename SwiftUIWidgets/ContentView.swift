@@ -8,14 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var alinanVeri = ""
+    @State private var tf = ""
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text("Gelen veri : \(alinanVeri)")
+            
+            TextField("Veri Giriniz", text: $tf)
+                .textFieldStyle(.bordered)
+                .padding()
+            
+            Button("Veriyi Al")
         }
-        .padding()
+       
     }
 }
 
