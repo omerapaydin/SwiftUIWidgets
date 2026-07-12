@@ -14,12 +14,24 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Text("Gelen veri : \(alinanVeri)")
+                .padding()
+                .foregroundStyle(.black)
+                
+                
+                .bold()
             
             TextField("Veri Giriniz", text: $tf)
                 .textFieldStyle(.bordered)
                 .padding()
             
-            Button("Veriyi Al")
+            Button("Veriyi Al"){
+                alinanVeri = tf
+            }
+            .padding()
+            .foregroundStyle(.white)
+            .background(.black)
+            .cornerRadius(.infinity)
+            
         }
        
     }
