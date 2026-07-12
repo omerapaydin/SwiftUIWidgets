@@ -15,8 +15,8 @@ struct ToggleS: View {
     var body: some View {
         VStack{
             Toggle("Switch",isOn: $switchDurum)
-                .onChange(of: switchDurum){ value in
-                    print("Switch :  \(switchDurum)")
+                .onChange(of: switchDurum){ _,value in
+                    print("Switch :  \(value)")
                 }
                 .toggleStyle(SwitchToggleStyle(tint: .red))
                 .padding()
