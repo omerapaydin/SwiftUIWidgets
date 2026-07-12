@@ -8,8 +8,32 @@
 import SwiftUI
 
 struct ImageView: View {
+    
+    @State private var resimAdi = "mutlu"
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            Image(resimAdi)
+                .resizable()
+                .frame(width: 100,height: 100)
+                
+            Button("Change"){
+               if resimAdi == "mutlu"
+                {
+                   resimAdi = "uzgun"
+                       
+               }else{
+                   resimAdi = "mutlu"
+
+               }
+            }
+            .padding()
+            .foregroundColor(.white)
+            .background(.black)
+            .cornerRadius(.infinity)
+            .padding()
+            
+            
+        }
     }
 }
 

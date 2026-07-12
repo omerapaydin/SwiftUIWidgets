@@ -8,8 +8,23 @@
 import SwiftUI
 
 struct ToggleS: View {
+    
+    @State private var switchDurum = false
+    
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            Toggle("Switch",isOn: $switchDurum)
+                .onChange(of: switchDurum){ value in
+                    print("Switch :  \(switchDurum)")
+                }
+                .toggleStyle(SwitchToggleStyle(tint: .red))
+                .padding()
+            
+            Button("Göster"){
+                print("Switch :  \(switchDurum)")
+            }
+        }
     }
 }
 
