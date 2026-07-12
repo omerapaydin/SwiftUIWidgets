@@ -8,8 +8,21 @@
 import SwiftUI
 
 struct StepperDurum: View {
+    
+    @State private var stepperDurum = 0
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            Stepper("Stepper",value: $stepperDurum,in: 0...10)
+                .padding()
+            
+            Text("Sonuç: \(stepperDurum)")
+            
+            Button("GÖSTER"){
+                print("Stepper Durum : \(stepperDurum)")
+            }
+            
+        }
     }
 }
 
